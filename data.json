@@ -1,0 +1,24 @@
+{
+    "trainings": [
+        {
+            "id": 0,
+            "name": "rower",
+            "cal": 300
+        },
+        {
+            "id": 1,
+            "name": "silownia",
+            "cal": 400
+        },
+        {
+            "id": 2,
+            "name": "bieganie",
+            "cal": 500
+        },
+        {
+            "id": 3,
+            "name": "pilka",
+            "cal": 250
+        }
+    ]
+}
