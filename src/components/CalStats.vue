@@ -15,7 +15,7 @@
 
 <template>
     <div>
-        <h2 class="text-left text-xl">daily target: target</h2>
+        <h2 class="text-left text-xl">daily target: target  +calculate</h2>
         <div class="flex justify-around">
             <SingleStat />
             <SingleStat />

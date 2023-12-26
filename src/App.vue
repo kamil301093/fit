@@ -1,5 +1,6 @@
 <script>
 import axios from 'axios'
+import CalcTarget from './components/CalcTarget.vue'
 import CalStats from './components/CalStats.vue'
 import SearchPanel from './components/SearchPanel'
 import ListOf from './components/ListOf.vue'
@@ -8,6 +9,7 @@ import SiteFooter from './components/SiteFooter.vue'
 export default {
   name: 'App',
   components: {
+    CalcTarget,
     CalStats,
     SearchPanel,
     ListOf,
@@ -15,15 +17,30 @@ export default {
   },
   data() {
     return {
-      trainings: []
+      myTrainings: [],
+      myMeals: []
     }
   },
-  async created() {
-    try {
-      const res = await axios.get(`http://localhost:3000/trainings`);
-      this.trainings = res.data;
-    } catch (error) {
-      console.log(error);
+  mounted: function () {
+    this.getMyTrainings(),
+      this.getMyMeals()
+  },
+  methods: {
+    getMyTrainings: async function () {
+      try {
+        const res = await axios.get(`http://localhost:3000/trainings`);
+        this.myTrainings = res.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    getMyMeals: async function () {
+      try {
+        const res = await axios.get(`http://localhost:3000/meal`);
+        this.myMeals = res.data;
+      } catch (error) {
+        console.log(error);
+      }
     }
   }
 }
@@ -32,11 +49,12 @@ export default {
 <template>
   <div class="text-center">
     <div class="m-auto w-[500px]">
+      <CalcTarget />
       <CalStats />
       <SearchPanel />
-      <ListOf name="Trainings" :listData="trainings" />
+      <ListOf listName="Trainings" :listData="myTrainings" />
       <SearchPanel />
-      <ListOf name="Meals" />
+      <ListOf listName="Meals" :listData="myMeals" />
       <SiteFooter />
     </div>
   </div>

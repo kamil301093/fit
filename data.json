@@ -20,5 +20,17 @@
             "name": "pilka",
             "cal": 250
         }
+    ],
+    "meal": [
+        {
+            "id": 0,
+            "name": "sandwich",
+            "cal": 300
+        },
+        {
+            "id": 1,
+            "name": "beer",
+            "cal": 200
+        }
     ]
 }
