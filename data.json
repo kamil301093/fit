@@ -1,36 +1,44 @@
 {
-    "trainings": [
-        {
-            "id": 0,
-            "name": "rower",
-            "cal": 300
-        },
-        {
-            "id": 1,
-            "name": "silownia",
-            "cal": 400
-        },
-        {
-            "id": 2,
-            "name": "bieganie",
-            "cal": 500
-        },
-        {
-            "id": 3,
-            "name": "pilka",
-            "cal": 250
-        }
-    ],
-    "meal": [
-        {
-            "id": 0,
-            "name": "sandwich",
-            "cal": 300
-        },
-        {
-            "id": 1,
-            "name": "beer",
-            "cal": 200
-        }
-    ]
+  "cal": [
+    {
+      "target": 0,
+      "eaten": 0,
+      "burned": 0,
+      "left": 0
+    }
+  ],
+  "trainings": [
+    {
+      "id": 0,
+      "name": "rower",
+      "cal": 300
+    },
+    {
+      "id": 1,
+      "name": "silownia",
+      "cal": 400
+    },
+    {
+      "id": 2,
+      "name": "bieganie",
+      "cal": 500
+    },
+    {
+      "id": 3,
+      "name": "pilka",
+      "cal": 250
+    }
+  ],
+  "meal": [
+    {
+      "id": 0,
+      "name": "sandwich",
+      "cal": 300
+    },
+    {
+      "id": 1,
+      "name": "beer",
+      "cal": 200
+    }
+  ]
 }

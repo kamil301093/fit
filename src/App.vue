@@ -51,7 +51,8 @@ export default {
     <div class="m-auto w-[500px]">
       <CalcTarget />
       <CalStats />
-      <SearchPanel />
+      <SearchPanel url="https://api.api-ninjas.com/v1/caloriesburned?activity='"
+        apiKey="/vYeXNNdQRDghe2/yU8qYw==trRLtfdZRF06dfSk" />
       <ListOf listName="Trainings" :listData="myTrainings" />
       <SearchPanel />
       <ListOf listName="Meals" :listData="myMeals" />

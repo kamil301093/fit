@@ -1,8 +1,8 @@
 <script>
-import SingleItem from './SingleItem'
+import AddedItem from './AddedItem'
 export default {
     components: {
-        SingleItem
+        AddedItem
     },
     props: {
         listName: { type: String },
@@ -14,6 +14,6 @@ export default {
 <template>
     <div>
         <h2 class="text-left">{{ listName }}</h2>
-        <SingleItem v-for="item of listData" :key="item.id" :itemName="item.name" :itemCal="item.cal" />
+        <AddedItem v-for="item of listData" :key="item.id" :itemName="item.name" :itemCal="item.cal" />
     </div>
 </template>

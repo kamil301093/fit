@@ -11,5 +11,6 @@ export default {
     <div class="flex justify-around">
         <span>{{ itemName }}</span>
         <span>{{ itemCal }}</span>
+        <a>remove</a>
     </div>
 </template>
