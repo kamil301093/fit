@@ -18,7 +18,7 @@ export default {
         getCalStats: async function () {
             try {
                 const res = await axios.get(`http://localhost:3000/cal`);
-                this.calStats = res.data; console.log(this.calStats)
+                this.calStats = res.data; console.log(res.data)
             } catch (error) {
                 console.log(error);
             }
