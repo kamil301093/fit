@@ -1,6 +1,7 @@
 <script>
 import axios from 'axios';
 import SingleStat from './SingleStat.vue'
+
 export default {
     name: 'CalStats',
     components: {
@@ -18,7 +19,7 @@ export default {
         getCalStats: async function () {
             try {
                 const res = await axios.get(`http://localhost:3000/cal`);
-                this.calStats = res.data; console.log(res.data)
+                this.calStats = res.data;
             } catch (error) {
                 console.log(error);
             }

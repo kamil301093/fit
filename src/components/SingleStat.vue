@@ -2,7 +2,7 @@
 export default {
     props: {
         name: { required: true, type: String },
-        qty: { required: true, type: Number }
+        qty: { required: true }
     },
 }
 </script>

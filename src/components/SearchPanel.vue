@@ -27,10 +27,13 @@ export default {
             this.results = [];
         },
         search: async function () {
-            try {console.log(this.apiKey)
+            try {
                 const link = this.url + '' + this.keyword;
-                const res = await axios.get(link, { 'X-Api-Key': this.apiKey })
-                console.log(res.data);
+                const res = await axios(link, {
+                        headers: {
+                        'X-Api-Key': this.apiKey
+                        }})
+                this.results = res.data;
             } catch (error) {
                 console.log(error);
             }
@@ -44,7 +47,7 @@ export default {
         <input @input="handleInput" class="bg-gray-300" type="text" :value="this.keyword" />
         <input type="button" value="Clear" @click="clear" />
     </form>
-    <div>
-        <SearchItem />
+    <div class="fixed">
+        <SearchItem v-for="result of results" :key="result.name" :name="result.name" :qty="result.calories_per_hour" />
     </div>
 </template>

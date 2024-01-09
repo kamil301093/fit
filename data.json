@@ -1,12 +1,12 @@
 {
-  "cal": [
+  "cal": 
     {
-      "target": 0,
-      "eaten": 0,
+      "target": "Not calculated",
+      "eaten": 20,
       "burned": 0,
       "left": 0
     }
-  ],
+  ,
   "trainings": [
     {
       "id": 0,
