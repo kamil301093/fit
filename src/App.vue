@@ -2,7 +2,8 @@
 import axios from 'axios'
 import CalcTarget from './components/CalcTarget.vue'
 import CalStats from './components/CalStats.vue'
-import SearchPanel from './components/SearchPanel'
+import SearchTrainings from './components/SearchTrainings'
+import SearchMeal from './components/SearchMeal'
 import ListOf from './components/ListOf.vue'
 import SiteFooter from './components/SiteFooter.vue'
 
@@ -11,7 +12,8 @@ export default {
   components: {
     CalcTarget,
     CalStats,
-    SearchPanel,
+    SearchTrainings,
+    SearchMeal,
     ListOf,
     SiteFooter
   },
@@ -51,10 +53,9 @@ export default {
     <div class="m-auto w-[500px]">
       <CalcTarget />
       <CalStats />
-      <SearchPanel url="https://api.api-ninjas.com/v1/caloriesburned?activity=" apiKey="/vYeXNNdQRDghe2/yU8qYw==trRLtfdZRF06dfSk" />
+      <SearchTrainings />
       <ListOf listName="Activity" :listData="myTrainings" />
-      <SearchPanel url="https://api.api-ninjas.com/v1/nutrition?query="
-        apiKey="/vYeXNNdQRDghe2/yU8qYw==trRLtfdZRF06dfSk" />
+      <SearchMeal />
       <ListOf listName="Meals" :listData="myMeals" />
       <SiteFooter />
     </div>

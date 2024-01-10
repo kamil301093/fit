@@ -9,13 +9,11 @@ export default {
     },
     data() {
         return {
+            url:'https://api.api-ninjas.com/v1/caloriesburned?activity=',
+            apiKey: '/vYeXNNdQRDghe2/yU8qYw==trRLtfdZRF06dfSk',
             keyword: '',
             results: []
         }
-    },
-    props: {
-        url: { required: true, type: String },
-        apiKey: { required: true, type: String }
     },
     methods: {
         handleInput(e) {

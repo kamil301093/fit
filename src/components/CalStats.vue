@@ -20,9 +20,14 @@ export default {
             try {
                 const res = await axios.get(`http://localhost:3000/cal`);
                 this.calStats = res.data;
+                this.calcLeft();
             } catch (error) {
                 console.log(error);
             }
+        },
+        calcLeft() {
+            const left = this.calStats.target - this.calStats.eaten + this.calStats.burned;
+            this.calStats.left = left;
         }
     }
 }

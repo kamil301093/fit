@@ -1,7 +1,7 @@
 {
   "cal": 
     {
-      "target": "Not calculated",
+      "target": 1500,
       "eaten": 20,
       "burned": 0,
       "left": 0
