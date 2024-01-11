@@ -9,10 +9,12 @@ export default {
     },
     data() {
         return {
-            url:'https://api.api-ninjas.com/v1/nutrition?query=',
+            searchUrl: 'https://api.api-ninjas.com/v1/nutrition?query=',
             apiKey: '/vYeXNNdQRDghe2/yU8qYw==trRLtfdZRF06dfSk',
             keyword: '',
-            results: []
+            results: [],
+            dataToAdd: {},
+            pushUrl: 'http://localhost:3000/meal'
         }
     },
     methods: {
@@ -26,18 +28,35 @@ export default {
         },
         search: async function () {
             try {
-                const link = this.url + '' + this.keyword;
+                const link = this.searchUrl + '' + this.keyword;
                 const res = await axios(link, {
-                        headers: {
+                    headers: {
                         'X-Api-Key': this.apiKey
-                        }})
+                    }
+                })
                 this.results = res.data;
             } catch (error) {
                 console.log(error);
             }
+        },
+        handleItem(meal, cal) {
+            const handledItem = { name: meal, cal: cal };
+            this.dataToAdd = handledItem;
+            this.addItem();
+        },
+        addItem: async function () {
+            try {
+                const link = this.pushUrl;
+                const data = this.dataToAdd;
+                const res = await axios.post(link, data);
+                console.log(res);
+            } catch (error) {
+                console.log(error)
+            }
         }
     }
 }
+
 </script>
 
 <template>
@@ -46,6 +65,7 @@ export default {
         <input type="button" value="Clear" @click="clear" />
     </form>
     <div class="fixed">
-        <SearchItem v-for="result of results" :key="result.name" :name="result.name" :qty="result.calories" />
+        <SearchItem v-for="result of results" :key="result.name" :name="result.name" :qty="result.calories"
+            :addFunction="handleItem(result.name, result.calories)" />
     </div>
 </template>

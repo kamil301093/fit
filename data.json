@@ -1,12 +1,10 @@
 {
-  "cal": 
-    {
-      "target": 1500,
-      "eaten": 20,
-      "burned": 0,
-      "left": 0
-    }
-  ,
+  "cal": {
+    "target": 1500,
+    "eaten": 20,
+    "burned": 0,
+    "left": 0
+  },
   "trainings": [
     {
       "id": 0,
@@ -39,6 +37,51 @@
       "id": 1,
       "name": "beer",
       "cal": 200
+    },
+    {
+      "name": "beer",
+      "cal": 43.3,
+      "id": 2
+    },
+    {
+      "name": "beer",
+      "cal": 43.3,
+      "id": 3
+    },
+    {
+      "name": "beer",
+      "cal": 43.3,
+      "id": 4
+    },
+    {
+      "name": "beer",
+      "cal": 43.3,
+      "id": 5
+    },
+    {
+      "name": "chicken",
+      "cal": 222.6,
+      "id": 6
+    },
+    {
+      "name": "beer",
+      "cal": 43.3,
+      "id": 7
+    },
+    {
+      "name": "beer",
+      "cal": 43.3,
+      "id": 8
+    },
+    {
+      "name": "beer",
+      "cal": 43.3,
+      "id": 9
+    },
+    {
+      "name": "beer",
+      "cal": 43.3,
+      "id": 10
     }
   ]
 }
